@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  /*-------------------------------------------------------------------- Variables */
+  /* Text */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  /* Background gradient */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /* Text */
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  /* Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+  /*----------------------------------------------------------- Font size y family */
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+body {
+  height: auto;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, var(--soft-violet) 0%, var(--soft-blue) 100%);
+}
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--very-dark-desaturated-blue);
+}
+.faq-card {
+  position: relative;
+  margin: 200px 5%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  max-width: 380px;
+  min-width: 375px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 15px 15px 5px rgba(0, 0, 0, 0.2);
+}
+.hero-img-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-img {
+  position: absolute;
+  top: -190px;
+  max-width: 300px;
+  filter: drop-shadow(0 35px 0px rgba(0, 0, 0, 0.1));
+}
+.desktop-img {
+  display: none;
+}
+.img-box {
+  display: none;
+}
+.desktop-img-shadow {
+  display: none;
+}
+.faq-hero {
+  font-weight: 900;
+  padding-top: 27%;
+  padding-bottom: 20px;
+}
+.faq-container {
+  padding: 0 25px;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
+.faq-questions {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+}
+.faq-questions {
+  font-size: 1.3rem;
+  padding-right: 10px;
+  color: var(--very-dark-grayish-blue);
+}
+.faq-questions::before {
+  content: url(./images/icon-arrow-down.svg);
+  position: absolute;
+  top: -2px;
+  /* display: flex; */
+  left: 320px;
+}
+.faq-questions:hover {
+  cursor: pointer;
+}
+.faq-text {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  max-width: 300px;
+}
+.show-text .faq-questions {
+  /* font-size: 1.3rem; */
+  max-height: initial;
+  font-weight: 900;
+}
+.show-text .faq-questions::before {
+  transform: rotate(180deg);
+}
+.show-text .faq-text {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  max-height: 80px;
+}
+hr {
+  margin: 0 20px;
+  height: 1px;
+  border: 0.5px solid var(--light-grayish-blue);
+}
+
+/*------------------------------------------------------------- Media Queries */
+@media (min-width: 900px) {
+  body {
+    max-height: 200vh;
+    min-height: 100vh;
+  }
+  .faq-card {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    min-width: unset;
+    max-width: 1440px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  .faq-hero {
+    margin-top: 50px;
+    padding-right: 330px;
+    text-align: left;
+    padding-top: 0;
+  }
+  .faq-container {
+    /* width: 900px; */
+    padding: 0 25px;
+    padding-left: 100px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  hr {
+    width: 332px;
+    margin-left: 100px;
+    height: 1px;
+    border: 0.5px solid var(--light-grayish-blue);
+  }
+  .img-container {
+    height: 100%;
+  }
+  .hero-img-container {
+    width: 450px;
+    height: 480px;
+    overflow: hidden;
+  }
+  .hero-img {
+    display: none;
+  }
+  .desktop-img {
+    display: initial;
+    position: absolute;
+    top: 20px;
+    left: -80px;
+    z-index: 1;
+  }
+  .img-box {
+    display: initial;
+    position: absolute;
+    top: 190px;
+    left: -90px;
+    z-index: 10;
+  }
+  .desktop-img-shadow {
+    display: initial;
+    position: absolute;
+    /* width: 500px;
+    height: 550px; */
+    z-index: 0;
+    top: -300px;
+    left: -570px;
+  }
+  .questions-container {
+    width: 600px;
+  }
+}
