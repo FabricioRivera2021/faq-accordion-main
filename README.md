@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/FabricioRivera2021/faq-accordion-main](https://github.com/FabricioRivera2021/faq-accordion-main)
+- Live Site URL: [https://fabriciorivera2021.github.io/faq-accordion-main/](https://fabriciorivera2021.github.io/faq-accordion-main/)
 
 ## My process
 
